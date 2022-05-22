@@ -10,9 +10,17 @@ const User = sequelize.define('user', {
     role: {type: DataTypes.STRING, defaultValue: "USER"},
 })
 
+const Music = sequelize.define('music', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    author: {type: DataTypes.STRING,},
+    name: {type: DataTypes.STRING,},
+    genre: {type: DataTypes.STRING,},
+    musicFile: {type: DataTypes.STRING,},
+})
 
 module.exports = {
-    User
+    User,
+    Music
 }
 
 
